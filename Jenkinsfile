@@ -1,6 +1,6 @@
 node('slave1'){
    checkout scm
-   sh "apt update"
-   sh "apt install docker"
+   sh "apt-get update"
+   sh "apt-get install docker"
    sh "docker build -t ubuntu-test ."
 }
