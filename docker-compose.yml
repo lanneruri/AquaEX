@@ -18,8 +18,10 @@ services:
       JENKINS_USER: "admin"
       JENKINS_PASS: "Admin"
       JENKINS_RETRY: "10"
+    privileged: true
     volumes:
     - jenkins-worker:/var/jenkins_home/worker
+    - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
   jenkins-master:
