@@ -10,7 +10,7 @@ services:
     - jenkins-master:/var/jenkins_home
 
   worker:
-    image: eeacms/jenkins-slave
+    image: jenkins-slave-test
     environment:
       JAVA_OPTS: "-Xmx2048m"
       JENKINS_MASTER: "http://master:8080"
